@@ -1,0 +1,194 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-family: "Lucida Grande", "segoe UI", "ヒラギノ丸ゴ ProN W4", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
+	font-size: 14px;
+	color: #525f66;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+dl {
+	border-bottom: 1px solid #eee;
+	padding: 20px 0;
+	margin: 0;
+}
+
+dt, dd {
+	display: table-cell; /*セルの横並び*/
+	vertical-align: middle; /*上下中央並び*/
+}
+
+dt {
+	/*左タイトル*/
+	width: 200px;
+	color: #999;
+}
+
+.btn {
+	/*送信ボタン位置設定*/
+	padding: 20px 0;
+}
+
+.form_style {
+	/*wrapper設定*/
+	width: 600px;
+	padding: 12px;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* フォームのスタイル設定
+----------------------------------------*/
+
+/* フォームスタイルのリセット */
+input, button, textarea, select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+
+/* テキストフォームの設定 */
+input[type="text"], textarea {	
+	padding: 10px;
+	color: #444;
+	border: solid 1px #ccc;
+	margin: 3px 0;
+	width: 300px;
+	border-radius: 3px;
+}
+
+
+/* フォーカス時の色変更 */
+input[type="text"], textarea {
+	outline: none;
+	border: 1px solid #aaa;
+	transition: all .3s;
+}
+input[type="text"]:focus, textarea:focus {
+	box-shadow: 20px 10px 0px #528fcc;
+	border: 1px solid #528fcc;
+}
+
+
+/* オートコンプリート使用後の背景色指定（自動入力されchromeでは黄色になる）*/
+input:-webkit-autofill {
+	box-shadow: 0 0 0 1000px #fff inset;
+}
+
+/* セレクタの設定 */
+select {
+	width: 300px;
+	padding: 10px;
+	margin: 3px 0;
+	font-size:16px;
+	color: #444;
+	border: solid 1px #ccc;
+	border-radius: 3px;
+	
+}
+
+/* ラジオボタン */
+input[type="radio"]{
+	display:none;/*レイアウトを揃える*/
+}
+
+input[type="radio"] + label {/*関連付けられたテキスト部分をクリックしてもチェックを付けることができる*/
+	position: relative;/*ポジションの設定*/
+	display: inline-block;
+	padding: 3px 3px 3px 20px;
+	cursor: pointer;
+}
+
+input[type="radio"] + label::before {
+	position: absolute;/*ポジションの設定*/
+	content: "";/*要素にコンテンツを挿入する際に使用*/
+	top: 50%;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	margin-top: -8px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 100%;/*ラジオボタンを丸くする*/
+}
+
+input[type="radio"]:checked + label::after {
+	position: absolute;/*ポジションの設定*/
+	content: "";/*要素にコンテンツを挿入する際に使用*/
+	top: 50%;
+	left: 4px;
+	width: 8px;
+	height: 8px;
+	margin-top: -4px;
+	background: #007bbb;
+	border-radius: 100%;/*ラジオボタンを丸くする*/
+}
+
+/* チェックボックス */
+input[type="checkbox"]{
+	display: none;/*レイアウトを揃える*/
+}
+
+input[type="checkbox"] + label {/*関連付けられたテキスト部分をクリックしてもチェックを付けることができる*/
+	position: relative;/*ポジションの設定*/
+	display: inline-block;
+	padding: 3px 3px 3px 22px;
+	cursor: pointer;/*カーソルの変更*/
+}
+
+input[type="checkbox"] + label::before {
+	position: absolute;/*ポジションの設定*/
+	content: "";/*要素にコンテンツを挿入する際に使用*/
+	top: 50%;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	margin-top: -8px;
+	margin-right: 6px;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+input[type="checkbox"]:checked + label::after {/*borderを使用してチェックマークを作成*/
+	position: absolute;/*ポジションの設定*/
+	content: "";/*要素にコンテンツを挿入する際に使用*/
+	top: 6px;
+	left: 3px;
+	width: 10px;
+	height: 5px;
+	border-left: 2px solid #007bbb;
+	border-bottom: 2px solid #007bbb;
+	transform: rotate(-45deg);
+}
+
+/* submitボタン */
+input[type="submit"]{
+	display: block;/*ブロック要素として表示する*/
+	width: 200px;
+	height: 50px;
+	margin: 0 auto;/*センターに表示*/
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	line-height: 50px;
+	text-align: center;
+	background: #a0d8ef;
+	border-radius: 10px;
+	cursor: pointer;/*カーソルの変更*/
+	outline: none;/*クリック時の枠線を消す*/
+}
+
+input[type="submit"]:hover {
+	background: #89c3ed;
+}
+
